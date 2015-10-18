@@ -74,6 +74,7 @@
 		<mkdir dir="${src.dir}" />
 		<mkdir dir="${target.dir}" />
 		<mkdir dir="${web.classes.dir}" />
+		<mkdir dir="${web.dir}/resources" />
 	</target>
  
 	<!-- Delete folders -->
