@@ -17,9 +17,9 @@ public class BaseController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
  
-		model.addAttribute("message", "Welcome, This is a build ${BUILD_NUMBER}");
+		model.addAttribute("message", "Welcome");
 		model.addAttribute("counter", ++counter);
-		logger.debug("[welcome] counter : {}", counter);
+		logger.debug("[welcome, This is a build ${BUILD_NUMBER}] counter : {}", counter);
  
 		// Spring uses InternalResourceViewResolver and return back index.jsp
 		return VIEW_INDEX;
