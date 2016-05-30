@@ -19,7 +19,7 @@ public class BaseController {
  
 		model.addAttribute("message", "Welcome");
 		model.addAttribute("counter", ++counter);
-		logger.debug("[welcome] counter : {}", counter);
+		logger.debug("["This is a build #$build_num! Welcome;] counter : {}", counter);
  
 		// Spring uses InternalResourceViewResolver and return back index.jsp
 		return VIEW_INDEX;
@@ -29,7 +29,7 @@ public class BaseController {
 	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	public String welcomeName(@PathVariable String name, ModelMap model) {
  
-		model.addAttribute("message", "Welcome , This is a build ${BUILD_NUMBER}" + name);
+		model.addAttribute("message", "Welcome" + name);
 		model.addAttribute("counter", ++counter);
 		logger.debug("[welcomeName] counter : {}", counter);
 		return VIEW_INDEX;
